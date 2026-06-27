@@ -3,22 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alberto Bayán | IT Support & Systems</title>
+  <title>Alberto Bayán | IT Portfolio</title>
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <h1>Hola, soy Alberto Bayán 👋</h1>
-  <p>Técnico Superior en ASIR especializado en soporte IT, sistemas, redes y ciberseguridad.</p>
+  <main class="page">
 
-  <h2>Proyectos</h2>
-  <ul>
-    <li>OpsGuard Cloud</li>
-    <li>ClusterX</li>
-    <li>Windows Server Lab</li>
-  </ul>
+    <header class="topbar">
+      <a class="brand" href="./">
+        <span class="brand-icon">&gt;_</span>
+        <span>ALBERTO BAYÁN</span>
+      </a>
 
-  <p>
-    <a href="https://github.com/albertobayan">Ver mi GitHub</a>
-  </p>
+      <div class="status">
+        <span class="status-dot"></span>
+        Disponible para nuevas oportunidades
+      </div>
+    </header>
+
+    <section class="hero">
+
+      <aside class="profile-card">
+        <div>
+          <span class="eyebrow">IT Portfolio · Madrid</span>
+
+          <h1>
+            Hola, soy<br>
+            <span class="accent">Alberto.</span>
+          </h1>
+
+          <p class="intro">
+            Técnico Superior en ASIR orientado a soporte IT, sistemas,
+            redes y ciberseguridad. Me gusta resolver problemas reales,
+            aprender haciendo y construir entornos fiables.
+          </p>
+
+          <div class="stack">
+            <span class="tag">Windows Server</span>
+            <span class="tag">Active Directory</span>
+            <span class="tag">Networking</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Azure</span>
+            <span class="tag">Cybersecurity</span>
+            <span class="tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="socials">
+          <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+
+          <a class="social-link" href="https://github.com/albertobayan" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+
+          <a class="social-link" href="mailto:tuemail@ejemplo.com">
+            Email
+          </a>
+
+          <a class="social-link" href="#chat">
+            Explorar perfil
+          </a>
+        </div>
+      </aside>
+
+      <section class="chat-card" id="chat">
+        <div class="chat-header">
+          <div>
+            <h2 class="chat-title">Portfolio Assistant</h2>
+            <p class="chat-subtitle">Haz clic en una opción para conocer mi perfil.</p>
+          </div>
+
+          <span class="terminal-label">ONLINE</span>
+        </div>
+
+        <div class="chat-area" id="chatArea">
+          <div class="message bot-message">
+            <h3>¡Bienvenido! 👋</h3>
+            <p>
+              Este es mi portfolio interactivo. Puedes conocer mi perfil,
+              consultar mi CV o explorar mis proyectos desde los botones de abajo.
+            </p>
+          </div>
+        </div>
+
+        <div class="quick-actions">
+          <p class="quick-actions-title">Selecciona una opción</p>
+
+          <div class="action-grid">
+            <button class="action-btn" data-action="about">Sobre mí</button>
+            <button class="action-btn" data-action="cv">Mi CV</button>
+            <button class="action-btn" data-action="projects">Mis proyectos</button>
+            <button class="action-btn" data-action="contact">Contacto</button>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <p class="footer">
+      © 2026 Alberto Bayán · Portfolio alojado en GitHub Pages
+    </p>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
