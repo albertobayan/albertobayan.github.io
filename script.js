@@ -23,6 +23,7 @@ function scrollChatToBottom() {
 
 function addUserMessage(text) {
   const message = document.createElement("div");
+
   message.className = "message user-message";
   message.textContent = text;
 
@@ -32,6 +33,7 @@ function addUserMessage(text) {
 
 function addBotMessage(html) {
   const message = document.createElement("div");
+
   message.className = "message bot-message";
   message.innerHTML = html;
 
@@ -55,15 +57,14 @@ function showAbout() {
     </p>
 
     <p>
-      Estoy orientado a oportunidades junior de <strong>soporte IT, helpdesk,
-      sistemas, redes y ciberseguridad</strong>. Me interesa especialmente
-      entender cómo funciona una infraestructura completa y resolver incidencias
-      de forma clara, práctica y ordenada.
+      Busco una oportunidad junior en <strong>soporte IT, sistemas, redes
+      o ciberseguridad</strong>, donde pueda seguir creciendo y aportar una
+      forma de trabajar práctica, responsable y orientada a resolver problemas.
     </p>
 
     <p>
-      Trabajo con Windows, Active Directory, Linux, redes TCP/IP, DNS, DHCP,
-      virtualización, Docker y fundamentos de cloud y seguridad.
+      Tengo experiencia y formación en Windows, Active Directory, Linux,
+      TCP/IP, DNS, DHCP, virtualización, Docker, Azure y seguridad.
     </p>
   `);
 }
@@ -74,9 +75,7 @@ function showCV() {
   addBotMessage(`
     <h3>Currículum</h3>
 
-    <p>
-      Puedes abrir mi CV en español o en inglés:
-    </p>
+    <p>Puedes abrir mi CV en español o en inglés:</p>
 
     <div class="project-list">
       <button class="project-button" onclick="openLink('${links.cvSpanish}')">
@@ -91,7 +90,7 @@ function showCV() {
     </div>
 
     <p style="margin-top: 12px; color: #9fb9aa; font-size: 0.86rem;">
-      Sube los dos PDF al repositorio con los nombres indicados para activar estos enlaces.
+      Sube los PDF al repositorio con esos nombres para que los enlaces funcionen.
     </p>
   `);
 }
@@ -103,9 +102,8 @@ function showProjects() {
     <h3>Proyectos destacados</h3>
 
     <p>
-      Estos proyectos reflejan lo que me gusta hacer: montar entornos,
-      documentarlos, asegurar accesos y entender el funcionamiento completo
-      de los sistemas.
+      Estos proyectos reflejan mi forma de aprender: construir infraestructuras,
+      documentarlas, proteger accesos y entender cada parte del entorno.
     </p>
 
     <div class="project-list">
@@ -128,21 +126,20 @@ function showProjects() {
 }
 
 function showProjectDetails(project) {
-  const data = {
+  const projects = {
     opsguard: {
       name: "OpsGuard Cloud",
       url: links.opsguard,
-      text: `
+      content: `
         <p>
           Plataforma de gestión de incidencias, auditoría de accesos
-          y monitorización básica construida para practicar un entorno
-          de operaciones moderno.
+          y monitorización básica para simular un entorno moderno de operaciones.
         </p>
 
         <ul>
           <li>FastAPI, PostgreSQL, Docker y Nginx.</li>
           <li>Autenticación JWT y control de roles.</li>
-          <li>Registro de eventos de seguridad y auditoría.</li>
+          <li>Eventos de seguridad y registros de auditoría.</li>
           <li>Métricas con Prometheus y paneles de Grafana.</li>
         </ul>
       `
@@ -151,17 +148,17 @@ function showProjectDetails(project) {
     clusterx: {
       name: "ClusterX",
       url: links.clusterx,
-      text: `
+      content: `
         <p>
-          Proyecto de alta disponibilidad centrado en una infraestructura
-          con replicación, balanceo y tolerancia a fallos.
+          Proyecto de alta disponibilidad centrado en replicación,
+          balanceo de carga y tolerancia a fallos.
         </p>
 
         <ul>
           <li>Cluster MariaDB Galera multi-master.</li>
           <li>HAProxy para balanceo TCP.</li>
           <li>Keepalived y VRRP para failover automático.</li>
-          <li>Portal de auditoría, alertas y copias de seguridad.</li>
+          <li>Auditoría, alertas y copias de seguridad.</li>
         </ul>
       `
     },
@@ -169,30 +166,30 @@ function showProjectDetails(project) {
     windows: {
       name: "Windows Server Lab",
       url: links.windowsServerLab,
-      text: `
+      content: `
         <p>
-          Laboratorio de empresa simulado con Windows Server y clientes
-          unidos a dominio para practicar administración real de sistemas.
+          Laboratorio corporativo simulado con Windows Server y equipos
+          cliente unidos a dominio.
         </p>
 
         <ul>
-          <li>Active Directory, usuarios, grupos y unidades organizativas.</li>
-          <li>GPOs para mapeo de unidades y configuración corporativa.</li>
-          <li>Permisos NTFS y recursos compartidos por departamentos.</li>
-          <li>DNS, gestión de equipos y resolución de incidencias.</li>
+          <li>Active Directory, usuarios, grupos y OU.</li>
+          <li>GPOs y mapeo automático de unidades.</li>
+          <li>Permisos NTFS y recursos compartidos.</li>
+          <li>DNS, gestión de equipos y soporte de incidencias.</li>
         </ul>
       `
     }
   };
 
-  const selected = data[project];
+  const selected = projects[project];
 
   addUserMessage(selected.name);
 
   addBotMessage(`
     <h3>${selected.name}</h3>
 
-    ${selected.text}
+    ${selected.content}
 
     <div class="project-list">
       <button class="project-button" onclick="openLink('${selected.url}')">
@@ -210,8 +207,8 @@ function showContact() {
     <h3>Contacto y enlaces</h3>
 
     <p>
-      Estoy disponible para oportunidades junior en soporte IT,
-      sistemas, redes o ciberseguridad.
+      Estoy disponible para oportunidades junior de soporte IT,
+      sistemas, redes y ciberseguridad.
     </p>
 
     <div class="project-list">
